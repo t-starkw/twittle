@@ -1,0 +1,7 @@
+// thoughtText
+
+// createdAt
+
+// username
+
+// reactions

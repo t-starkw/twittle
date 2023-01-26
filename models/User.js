@@ -1,0 +1,7 @@
+// username
+
+// email
+
+// thoughts
+
+// friends
