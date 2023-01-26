@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.9.0"
-  }
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "twittle",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-starkw/twittle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-starkw/twittle/issues"
+  },
+  "homepage": "https://github.com/t-starkw/twittle#readme"
 }
