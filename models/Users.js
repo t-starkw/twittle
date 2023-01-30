@@ -15,11 +15,12 @@ const userSchema = new Schema(
             // validate email
             match: [/.+@.+\..+/, "Must enter a valid email address!"]
         },
-        thoughts: {
-            type: Schema.Types.ObjectId,
-            ref: 'Thought'
-
-        },
+        thoughts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thoughts'
+            }
+        ],
         friends: [
             {
                 type: Schema.Types.ObjectId,
