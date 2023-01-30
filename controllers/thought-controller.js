@@ -1,4 +1,4 @@
-const { Thoughts } = require('../models');
+const { Users, Thoughts } = require('../models');
 
 module.exports = {
 
@@ -15,7 +15,7 @@ module.exports = {
 
     // get single thought
     getSingleThought(req, res) {
-        Thoughts.findOne({ _id: req.params.id })
+        Thoughts.findOne({ _id: req.params.thoughtId })
             .select('-__v')
             .then((dbThoughtData) =>
                 !dbThoughtData
@@ -28,16 +28,23 @@ module.exports = {
     // create thought
     createThought(req, res) {
         Thoughts.create(req.body)
-            .then((dbThoughtData) => res.json(dbThoughtData))
-            .catch((err) => {
-                console.log(err);
-                res.status(500).json(err)
-            });
-
-    },
+          .then(({ _id }) => {
+            return Users.findOneAndUpdate(
+              { _id: req.body.userId },
+              { $push: { thoughts: _id } },
+              { new: true }
+            );
+          })
+          .then((thought) =>
+            !thought
+              ? res.status(404).json({ message: "No User find with this ID!" })
+              : res.json(thought)
+          )
+          .catch((err) => res.status(500).json(err));
+      },
     // delete a thought
     deleteThought(req, res) {
-        Thoughts.findOneAndDelete({ _id: req.params.id })
+        Thoughts.findOneAndDelete({ _id: req.params.thoughtId })
             .then((dbThoughtData) =>
                 !dbThoughtData
                     ? res.status(404).json({ message: 'No thought found with this id!' })
@@ -50,7 +57,7 @@ module.exports = {
     // update a Thought
     updateThought(req, res) {
         Thoughts.findOneAndUpdate(
-            { _id: req.params.id },
+            { _id: req.params.thoughtId },
             { $set: req.body },
             { runValidators: true, new: true }
         )
