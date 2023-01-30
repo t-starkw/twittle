@@ -15,15 +15,9 @@ Twittle is an API aimed for use in social networking applications, allowing deve
 4. Run `npm start` to run the server
 5. Use your browser or an app like [Insomnia](https://insomnia.rest/) to test the REST API.
 
-### Dependencies
-
-* Mongoose
-* Moment.js
-* Express.js
-* Nodemon (optional)
-
 
 ## Endpoints
+
 **User**
 - Get all users:        `GET /api/users`
 - Create a user:        `POST /api/users`
@@ -45,5 +39,11 @@ Twittle is an API aimed for use in social networking applications, allowing deve
 - Delete a reaction:    `DELETE /api/thoughts/:id/reactions`
 
 
-## License
+## Dependencies
+
+* Mongoose
+* Moment.js
+* Express.js
+* Nodemon (optional)
+
 
