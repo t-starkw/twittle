@@ -1,5 +1,5 @@
 # Twittle
->### Module xx UNC Coding Bootcamp Challenge - A NoSQL social networking API <br><br>
+>### Module 18 UNC Coding Bootcamp Challenge - A NoSQL social networking API <br><br>
 >  Twittle is an API aimed for use in social networking applications, allowing developers to store and retrieve data typical of social media networks including user data, posts, reactions, and friends lists. The API utilizes a MongoDB database and the Mongoose ODM, as well as the Express.js package for routing. <br><br>
 
 ![JavaScript][js-url]
