@@ -7,14 +7,30 @@
 ![Mongo][mongo-url]
 ![Express][express-url]
 
+## Installation
+
+Clone the repository:
+
+```sh
+git clone git@github.com:t-starkw/twittle.git
+```
+
+Install the required dependencies:
+
+```sh
+npm install
+```
+
+Run the project in your local browser:
+
+```sh
+npm start
+```
+
 
 ## Usage
 
-1. Ensure that you have MongoDB installed on your machine (if you don't, follow the instructions on the [MongoDB Website](https://docs.mongodb.com/manual/installation/))
-2. Clone the repo
-3. Install dependencies with `npm -i`
-4. Run `npm start` to run the server
-5. Use your browser or an app like [Insomnia](https://insomnia.rest/) to test the REST API.
+Use your browser or an app like [Insomnia](https://insomnia.rest/) to test the REST API.
 
 ## Endpoints
 
@@ -48,7 +64,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/t-starkw/graphic-ql/fork>)
+1. Fork it (<https://github.com/t-starkw/twittle/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
